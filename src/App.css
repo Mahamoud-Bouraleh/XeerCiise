@@ -1,269 +1,161 @@
-/* Global Styles */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
+  
+ 
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-  height: 160px;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  min-height: 100vh; /* Assure que l'application prend toute la hauteur de la fenêtre */
 }
 
 /* Header Styles */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre subtile */
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  width: 40px;
-  margin-right: 10px;
-}
-
-.logo span {
-  font-size: 18px;
-  font-weight: bold;
-  color: #003366;
-}
-
-/* Navigation Links */
-.nav-links {
-  display: flex;
-  gap: 20px; /* Espacement entre les liens */
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  color: #000;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #007bff; /* Couleur au survol */
-}
-
-.nav-links .active {
-  color: #007bff;
-  position: relative;
-}
-
-.nav-links .active::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #007bff; /* Ligne bleue sous le lien actif */
-}
-
-/* Connect Button */
-.connect-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 20px;
-  background-color: #007bff;
+.app-header {
+  background-color: rgb(133, 238, 5);
   color: white;
-  border: none;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s;
-}
-
-.language-selector {
-  padding: 5px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-
-
-
-/* Section Info */
-.info-section {
-  padding: 20px;
-  background-color: #f9f9f9;
-  margin: 20px 0;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.info-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.icon {
-  width: 60px;
-  margin-right: 20px;
-}
-
-.info-text {
-  flex: 2;
-  text-align: left;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-}
-
-.buttons {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px; /* Ajoute de l'espace entre les boutons */
-}
-
-.green-button {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.green-button:hover {
-  background-color: #218838;
-  transform: translateY(-2px); /* Ajoute un effet de survol */
-}
-
-.green-button:active {
-  background-color: #1e7e34;
-  transform: translateY(0); /* Réinitialise l'effet au clic */
-}
-
-/* Map Section */
-.map-section {
-  padding: 20px;
-  background-color: #d4eef7;
-  border-radius: 10px;
   text-align: center;
+  padding: 50px;
+  box-shadow: 0px 4px 8px rgba(40, 226, 30, 0.359);
 }
 
-.map-image {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
+/* Navigation Styles */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgb(244, 241, 246);
+  padding: 8px 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.legend {
-  margin-top: 20px;
-  text-align: left;
+.main-nav a {
+  color: rgb(14, 14, 14);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-.legend h4 {
-  margin-bottom: 10px;
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: #0056b3;
 }
 
-.legend ul {
+/* Main Content Area: Flexbox for Sidebar and Section */
+.app-main {
+  display: flex;
+  flex: 1; /* Prend tout l'espace disponible */
+  padding: 20px;
+  gap: 20px; /* Espace entre le menu et la section */
+  background-color: #f9f9f9; /* Optionnel : pour différencier du container principal */
+}
+
+/* Sidebar Styles */
+.sidebar-menu {
+  flex: 0 0 250px; /* Largeur fixe pour le menu */
+  background-color: #e3e3e3;
+  padding: 15px;
+  margin-left: 200px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optionnel : ajouter une ombre pour délimiter le menu */
+}
+
+.sidebar-menu h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.sidebar-menu ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
-.legend ul li {
-  margin-bottom: 5px;
-}
-
-/* Footer Styles */
-.footer {
-  background-color: #2b1415;
-  color: #fff;
-  padding: 20px 10px;
-  margin-top: 20px;
-  border-top: 4px solid #007bff;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.contact-info,
-.social-media {
-  flex: 1;
-  text-align: left;
-  padding: 10px;
-}
-
-.contact-info h4,
-.social-media h4 {
-  font-size: 16px;
+.sidebar-menu li {
   margin-bottom: 10px;
-  color: #f5f5f5;
 }
 
-.contact-info p {
-  margin: 5px 0;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.sidebar-menu li a {
+  color: #0069d9;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-.social-media .icons {
-  display: flex;
-  gap: 15px;
-  font-size: 20px;
+.sidebar-menu li a:hover {
+  background-color: #d1ecf1;
 }
 
-.social-media a {
-  color: white;
-  transition: color 0.3s ease;
+/* Main Content Section */
+.main-content {
+  flex: 1; /* Prend tout l'espace restant */
+  padding: 20px;
+  margin-right: 200px;
+  background-color: rgb(175, 21, 21); /* Optionnel : pour différencier du fond */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Optionnel : ajouter une légère ombre */
+  border-radius: 5px; /* Optionnel : arrondir les coins */
 }
 
-.social-media a:hover {
-  color: #007bff;
+.main-content h2 {
+  color: #0056b3;
 }
 
-.footer-bottom {
-  text-align: center;
+.main-content p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.example-card {
+  width: 100%;
+  max-width: 600px;
   margin-top: 20px;
-  font-size: 12px;
-  color: #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Styles pour l'image */
-.icon {
-  width: 400px; /* Largeur de l'image */
-  height: 300px; /* Hauteur de l'image */
-  object-fit: cover; /* Recadre l'image pour qu'elle s'adapte au conteneur */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre subtile */
-  margin-right: 20px; /* Espacement à droite */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effets au survol */
+.contact-bar {
+  background-color: white;
+  border: 1px solid #ddd; /* Bordure grise */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 15px;
+  margin-left: 200px;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
 }
 
-.icon:hover {
-  transform: scale(1.1); /* Agrandit légèrement l'image au survol */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Accentue l'ombre au survol */
+.contact-bar h4 {
+  color: #198754; /* Vert foncé pour le titre */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-bar p {
+  margin: 5px 0;
+  color: #333; /* Couleur de texte gris foncé */
+  line-height: 1.5;
+  font-size: 0.9rem; /* Taille de texte légèrement réduite */
+}
+
+.contact-bar p strong {
+  font-weight: bold;
+  color: #333; /* Même couleur pour cohérence */
+}
+
+.contact-bar a {
+  color: #0056b3; /* Bleu pour le lien */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-bar a:hover {
+  text-decoration: underline; /* Soulignement au survol */
 }

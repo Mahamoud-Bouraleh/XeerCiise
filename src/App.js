@@ -1,117 +1,72 @@
-import React, { useState } from "react";
-import "./App.css";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaWhatsapp,
-  FaEnvelope,
-  FaPhone,
-} from "react-icons/fa";
-import sages from "./sages.jpg"; // Importation de l'image
+import React from "react";
+import './App.css';
 
 const App = () => {
-  const [language, setLanguage] = useState("fr");
-
   return (
-    <div className="container">
-      <header className="header">
-        <div className="logo">
-          <img src="/path/to/logo.png" alt="Logo" />
-          <span>Xeer Ciise Somali</span>
-        </div>
-        <nav className="nav-links">
-          <a href="#services" className="active">
-            Acceuille
-          </a>
-          <a href="#hire-developers">A propos</a>
-          <a href="#careers">Reglement et preference</a>
-          <a href="#case-study">Historique</a>
-          <a href="#company">Contact</a>
-        </nav>
-        <select
-          className="language-selector"
-          value={language}
-          onChange={(e) => setLanguage(e.target.value)}
-        >
-          <option value="fr">Français</option>
-          <option value="en">English</option>
-          <option value="so">Somali</option>
-        </select>
+    <div className="app-container">
+      {/* Header Section */}
+      <header className="app-header">
+        <h1>Xeer Ciise</h1>
       </header>
 
-      <main>
-        <section className="info-section">
-          <div className="info-content">
-            <img src={sages} alt="Sages" className="icon" /> {/* Image incluse ici */}
-            <div className="info-text">
-              <p>
-                Grâce aux informations centralisées et aux analyses générées
-                par la plateforme, les dirigeants peuvent prendre des décisions
-                éclairées pour optimiser la gestion de leur entreprise.
-              </p>
-              <p>
-                Le tableau de bord est conçu pour être simple à utiliser, avec
-                une présentation claire des informations essentielles,
-                facilitant la navigation et l'interprétation des données.
-              </p>
-            </div>
-            <div className="buttons">
-              <button className="green-button">Histoire reer isse</button>
-              <button className="green-button">Xeex cisse-Somali</button>
-              <button className="green-button">Histoires Océan</button>
-              <button className="green-button">Histoire l'est Africa</button>
-            </div>
-          </div>
-        </section>
+      {/* Navigation */}
+      <nav className="main-nav">
+        <a href="#accueil" className="active">ACCUEIL</a>
+        <a href="#consulat">A propos</a>
+        <a href="#avis">reglement et preference</a>
+        <a href="#services">Historique</a>
+        <a href="#visas">Contact</a>
+      </nav>
 
-        <section className="map-section">
+      {/* Main Content */}
+      <div className="app-main">
+        <div>
+        <aside className="sidebar-menu">
+          <h3>MENU</h3>
+          <ul>
+            <li><a href="#accueil">ACCUEIL</a></li>
+            <li><a href="#consulat">A propos</a></li>
+            <li><a href="#service-economique">Reglement et preference</a></li>
+            <li><a href="#gestion-consulaire"> Historique</a></li>
+            <li><a href="#etat-civil">Contact</a></li>
+          
+          </ul>
+          
+        </aside>
+         {/* Contact Bar */}
+      <div className="contact-bar">
+        <h4>NOUS CONTACTER</h4>
+        <p><strong>Consulat Général d'Algérie à Paris</strong></p>
+        <p>1, Passage du Trône<br />75011 Paris</p>
+        <p>Téléphone: +33 1 53 72 07 00</p>
+        <p>Fax: +33 1 53 72 07 14</p>
+        <p>Mails: <a href="mailto:contact@xeerciise.com">contact@xeerciise.com</a></p>
+      </div></div>
+
+        <section className="main-content">
+          <h2>Votre Carte d’Identité Nationale Biométrique est-elle prête?</h2>
+          <p>
+            La carte nationale d’identité biométrique est établie en Algérie. Les
+            intéressés sont invités à vérifier sur le site du Consulat si celle-ci est
+            disponible, avant de se présenter pour le retrait.
+          </p>
+          <p>
+            Pour vérifier la disponibilité de votre carte nationale d’identité biométrique,
+            veuillez introduire <strong>le Numéro d’Identification National « NIN »</strong>.
+          </p>
+          <p>
+            <strong>
+              À noter que le Numéro d’Identification National « NIN » est également porté
+              sur votre passeport biométrique.
+            </strong>
+          </p>
           <img
-            src="/path/to/africa-map.png"
-            alt="Carte Afrique"
-            className="map-image"
+            src="/path-to-example-card.png"
+            alt="Exemple de Carte"
+            className="example-card"
           />
-          <h3>Géolocalisation du map reer isse - Somali</h3>
-          <div className="legend">
-            <h4>Légende</h4>
-            <ul>
-              <li>Pays représentés</li>
-              <li>Couleurs des secteurs</li>
-              <li>Informations spécifiques</li>
-            </ul>
-          </div>
         </section>
-      </main>
-
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="contact-info">
-            <h4>Contact</h4>
-            <p>
-              <FaPhone /> +253 77 123 456
-            </p>
-            <p>
-              <FaEnvelope /> contact@xeerciise.com
-            </p>
-          </div>
-          <div className="social-media">
-            <h4>Suivez-nous</h4>
-            <div className="icons">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <FaFacebook />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <FaTwitter />
-              </a>
-              <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">
-                <FaWhatsapp />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>© 2024 Xeer Ciise Somali. Tous droits réservés.</p>
-        </div>
-      </footer>
+      </div>
     </div>
   );
 };
