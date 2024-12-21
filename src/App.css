@@ -3,25 +3,55 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  
- 
+  background: #f9f9f9;
 }
 
 .app-container {
-  display: flex;
-  flex-direction: column;
-  background-color: #f9f9f9;
+  position: relative; /* Nécessaire pour la superposition */
   min-height: 100vh; /* Assure que l'application prend toute la hauteur de la fenêtre */
+  background-image: url('./xeercisse.jpg'); /* Remplacez par votre image */
+  background-size: cover; /* Couvre toute la surface disponible */
+  background-position: center; /* Centre l'image */
+  background-attachment: fixed; /* Fixe l'image lors du défilement */
+}
+
+.app-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Couche de superposition */
+  z-index: 0;
+}
+
+/* Assurez-vous que tous les enfants sont au-dessus de la superposition */
+.app-container > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Header Styles */
 .app-header {
-  background-color: rgb(133, 238, 5);
   color: white;
-  text-align: center;
-  padding: 50px;
-  box-shadow: 0px 4px 8px rgba(40, 226, 30, 0.359);
+  padding: 80px;
+  display: flex; /* Active Flexbox */
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optionnel : légère ombre */
+  position: relative;
+}
+
+.header-logo {
+  position: absolute;
+  border-radius: 50%;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: auto;
 }
 
 /* Navigation Styles */
@@ -29,8 +59,8 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
-  background-color: rgb(244, 241, 246);
   padding: 8px 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement transparent */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,28 +76,28 @@ body {
 .main-nav a:hover,
 .main-nav a.active {
   background-color: #0056b3;
+  color: white;
 }
 
-/* Main Content Area: Flexbox for Sidebar and Section */
+/* Main Content Area */
 .app-main {
   display: flex;
-  flex: 1; /* Prend tout l'espace disponible */
+  flex: 1;
   padding: 20px;
-  gap: 20px; /* Espace entre le menu et la section */
-  background-color: #f9f9f9; /* Optionnel : pour différencier du container principal */
+  gap: 20px;
 }
 
 /* Sidebar Styles */
 .sidebar-menu {
-  flex: 0 0 250px; /* Largeur fixe pour le menu */
-  background-color: #e3e3e3;
+  flex: 0 0 250px; /* Largeur fixe */
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement transparent */
   padding: 15px;
-  margin-left: 200px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optionnel : ajouter une ombre pour délimiter le menu */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-left: 120px;
 }
 
 .sidebar-menu h3 {
-  color: #333;
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
@@ -75,7 +105,6 @@ body {
 .sidebar-menu ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
 .sidebar-menu li {
@@ -97,12 +126,13 @@ body {
 
 /* Main Content Section */
 .main-content {
-  flex: 1; /* Prend tout l'espace restant */
+  flex: 1;
   padding: 20px;
-  margin-right: 200px;
-  background-color: rgb(175, 21, 21); /* Optionnel : pour différencier du fond */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Optionnel : ajouter une légère ombre */
-  border-radius: 5px; /* Optionnel : arrondir les coins */
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement transparent */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-right: 130px;
+ 
 }
 
 .main-content h2 {
@@ -110,52 +140,39 @@ body {
 }
 
 .main-content p {
-  margin-bottom: 10px;
   line-height: 1.5;
+  margin-bottom: 10px;
 }
 
-.example-card {
-  width: 100%;
-  max-width: 600px;
-  margin-top: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
+/* Contact Bar */
 .contact-bar {
-  background-color: white;
-  border: 1px solid #ddd; /* Bordure grise */
-  border-radius: 5px; /* Coins arrondis */
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement transparent */
+  border: 1px solid #ddd;
+  border-radius: 5px;
   padding: 15px;
-  margin-left: 200px;
-  margin-top: 20px;
-  font-family: Arial, sans-serif;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 130px;
+  margin-top: 10px;
 }
 
 .contact-bar h4 {
-  color: #198754; /* Vert foncé pour le titre */
+  color: #198754;
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
 .contact-bar p {
-  margin: 5px 0;
-  color: #333; /* Couleur de texte gris foncé */
+  color: #333;
+  font-size: 0.9rem;
   line-height: 1.5;
-  font-size: 0.9rem; /* Taille de texte légèrement réduite */
-}
-
-.contact-bar p strong {
-  font-weight: bold;
-  color: #333; /* Même couleur pour cohérence */
 }
 
 .contact-bar a {
-  color: #0056b3; /* Bleu pour le lien */
+  color: #0056b3;
   text-decoration: none;
   font-weight: bold;
 }
 
 .contact-bar a:hover {
-  text-decoration: underline; /* Soulignement au survol */
+  text-decoration: underline;
 }

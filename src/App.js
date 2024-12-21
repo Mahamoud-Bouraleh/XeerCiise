@@ -1,20 +1,23 @@
 import React from "react";
 import './App.css';
+import sagesLogo from './sages.jpg'; 
 
 const App = () => {
   return (
-    <div className="app-container">
+    <div className="app-container"  >
       {/* Header Section */}
       <header className="app-header">
-        <h1>Xeer Ciise</h1>
-      </header>
+      <img src={sagesLogo} alt="Logo" className="header-logo" />
+     <h1>Xeer Ciise</h1>
+           </header> 
 
       {/* Navigation */}
       <nav className="main-nav">
         <a href="#accueil" className="active">ACCUEIL</a>
         <a href="#consulat">A propos</a>
         <a href="#avis">reglement et preference</a>
-        <a href="#services">Historique</a>
+        <a href="#services">Geosom</a>
+        <a href="#services">Historique </a>
         <a href="#visas">Contact</a>
       </nav>
 
@@ -27,6 +30,7 @@ const App = () => {
             <li><a href="#accueil">ACCUEIL</a></li>
             <li><a href="#consulat">A propos</a></li>
             <li><a href="#service-economique">Reglement et preference</a></li>
+            <li> <a href="#services">Geosom</a></li>
             <li><a href="#gestion-consulaire"> Historique</a></li>
             <li><a href="#etat-civil">Contact</a></li>
           
@@ -35,36 +39,26 @@ const App = () => {
         </aside>
          {/* Contact Bar */}
       <div className="contact-bar">
-        <h4>NOUS CONTACTER</h4>
-        <p><strong>Consulat Général d'Algérie à Paris</strong></p>
-        <p>1, Passage du Trône<br />75011 Paris</p>
-        <p>Téléphone: +33 1 53 72 07 00</p>
-        <p>Fax: +33 1 53 72 07 14</p>
-        <p>Mails: <a href="mailto:contact@xeerciise.com">contact@xeerciise.com</a></p>
+        <h4> CONTACTER NOUS</h4>
+      
+        <p>Téléphone: +253 77 15 34 98</p>
+        <p>Fax: +253 21 36 92 56</p>
+        <p>Mails: <a href="mailto:contact@xeerciise.com">geosom@gmail.com</a></p>
       </div></div>
 
         <section className="main-content">
-          <h2>Votre Carte d’Identité Nationale Biométrique est-elle prête?</h2>
+          <h2>Reglement REER CISSE - SOMALI </h2>
           <p>
-            La carte nationale d’identité biométrique est établie en Algérie. Les
-            intéressés sont invités à vérifier sur le site du Consulat si celle-ci est
-            disponible, avant de se présenter pour le retrait.
+          Le xeer ciise fait référence au droit coutumier oral des communautés somali-Issa d’Éthiopie,
+           de Djibouti et de Somalie. Système de gouvernance démocratique très structuré et rigoureusement codifié, 
+           il comporte trois composantes principales : (a) une constitution politique, 
+           qui définit la répartition du pouvoir et les processus de prise de décision ;
+            (b) un code pénal, qui établit une justice au sein de la communauté, axée sur la réconciliation et la compensation ; et 
+            (c) un code de conduite sociale, qui définit une série de principes et de valeurs métaphysiques, 
+          spirituelles et sociales pour réguler les comportements collectifs et individuels.
           </p>
-          <p>
-            Pour vérifier la disponibilité de votre carte nationale d’identité biométrique,
-            veuillez introduire <strong>le Numéro d’Identification National « NIN »</strong>.
-          </p>
-          <p>
-            <strong>
-              À noter que le Numéro d’Identification National « NIN » est également porté
-              sur votre passeport biométrique.
-            </strong>
-          </p>
-          <img
-            src="/path-to-example-card.png"
-            alt="Exemple de Carte"
-            className="example-card"
-          />
+          
+
         </section>
       </div>
     </div>
