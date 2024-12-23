@@ -1,0 +1,18 @@
+.historique-content {
+    color: #6f42c1; /* Purple theme */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  .historique-content h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6f42c1;
+  }
+  
+  .historique-content p {
+    margin-bottom: 20px;
+  }
+  

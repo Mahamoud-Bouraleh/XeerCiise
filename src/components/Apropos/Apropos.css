@@ -1,0 +1,18 @@
+.apropos-content {
+    color: #fd7e14; /* Orange theme */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  .apropos-content h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fd7e14;
+  }
+  
+  .apropos-content p {
+    margin-bottom: 20px;
+  }
+  

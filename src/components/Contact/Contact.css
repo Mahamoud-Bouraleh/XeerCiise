@@ -1,0 +1,28 @@
+.contact-content {
+    color: #0dcaf0; /* Blue theme */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  .contact-content h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0dcaf0;
+  }
+  
+  .contact-content p {
+    margin-bottom: 20px;
+  }
+  
+  .contact-content a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact-content a:hover {
+    text-decoration: underline;
+  }
+  
