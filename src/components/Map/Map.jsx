@@ -1,11 +1,11 @@
 import React from "react";
-import './Geosom.css'; // Importation du fichier CSS
+import './Map.css'; // Importation du fichier CSS
 import cartciise from './cartciise.jpg'; // Importer l'image depuis le même dossier
 
-const Geosom = () => {
+const Map = () => {
   return (
     <div className="geosom-container">
-      <h2 className="geosom-title">Geosom</h2>
+      <h2 className="geosom-title">Ciise Map</h2>
       <p className="geosom-description">
         Geosom est une initiative innovante qui vise à utiliser les technologies modernes pour 
         cartographier les ressources naturelles, infrastructures et opportunités économiques 
@@ -17,4 +17,4 @@ const Geosom = () => {
   );
 };
 
-export default Geosom;
+export default Map;

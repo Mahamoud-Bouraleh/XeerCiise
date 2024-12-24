@@ -1,12 +1,14 @@
 
 import './App.css';
-import sagesLogo from './sages.jpg'; 
+import sagesLogo from './tete.jpg'; 
 import React, { useState } from "react";
 import Acceuille from './components/Acceuille/Acceuille';
 import Apropos from './components/Apropos/Apropos';
-import Geosom from './components/Geosom/Geosom';
+import Geosom from './components/Map/Map';
 import Historique from './components/Histoire/Historique';
 import Contact from './components/Contact/Contact';
+import Reglement from './components/RegleP/Reglement';
+
 
 
 
@@ -30,18 +32,25 @@ const App = () => {
     <div className="app-container"  >
       {/* Header Section */}
       <header className="app-header">
-      <img src={sagesLogo} alt="Logo" className="header-logo" />
-     <h1>Xeer Ciise</h1>
+  <img src={sagesLogo} alt="Logo" className="header-logo-left" />
+  <div className="header-content">
+    <h1>Xeer Somali-Ciise</h1>
   
-           </header> 
+  </div>
+  
+</header>
+
 
       {/* Navigation */}
       <nav className="main-nav">
         <a href="#accueil" onClick={() => handleNavigation('accueil')} className={currentPage === 'accueil' ? 'active' : ''}>ACCUEIL</a>
         <a href="#apropos" onClick={() => handleNavigation('apropos')} className={currentPage === 'apropos' ? 'active' : ''}>À propos</a>
-        <a href="#geosom" onClick={() => handleNavigation('geosom')} className={currentPage === 'geosom' ? 'active' : ''}>Geosom</a>
+        <a href="#Map" onClick={() => handleNavigation('Map')} className={currentPage === 'Map' ? 'active' : ''}>Map</a>
+        <a href="#reglement" onClick={() => handleNavigation('reglement')} className={currentPage === 'reglement' ? 'active' : ''}>Règlement</a>
         <a href="#historique" onClick={() => handleNavigation('historique')} className={currentPage === 'historique' ? 'active' : ''}>Historique</a>
         <a href="#contact" onClick={() => handleNavigation('contact')} className={currentPage === 'contact' ? 'active' : ''}>Contact</a>
+
+        
 
         <div className="language-select">
           <label htmlFor="language" className="language-label">
@@ -69,7 +78,8 @@ const App = () => {
          
             <li><a href="#accueil" onClick={() => handleNavigation('accueil')} className={currentPage === 'accueil' ? 'active' : ''}>ACCUEIL</a></li>
             <li><a href="#apropos" onClick={() => handleNavigation('apropos')} className={currentPage === 'apropos' ? 'active' : ''}>À propos</a></li>
-            <li><a href="#geosom" onClick={() => handleNavigation('geosom')} className={currentPage === 'geosom' ? 'active' : ''}>Geosom</a></li>
+            <li><a href="#Map" onClick={() => handleNavigation('Map')} className={currentPage === '' ? 'active' : ''}>Map</a></li>
+            <li><a href="#reglement" onClick={() => handleNavigation('reglement')} className={currentPage === 'reglement' ? 'active' : ''}>Règlement</a></li>
             <li><a href="#historique" onClick={() => handleNavigation('historique')} className={currentPage === 'historique' ? 'active' : ''}>Historique</a></li>
             <li> <a href="#contact" onClick={() => handleNavigation('contact')} className={currentPage === 'contact' ? 'active' : ''}>Contact</a></li>
           
@@ -88,9 +98,11 @@ const App = () => {
       <section className="main-content">
   {currentPage === 'accueil' && <Acceuille />}
   {currentPage === 'apropos' && <Apropos />}
-  {currentPage === 'geosom' && <Geosom />}
+  {currentPage === 'Map' && <Geosom />}
   {currentPage === 'historique' && <Historique />}
   {currentPage === 'contact' && <Contact />}
+  {currentPage === 'reglement' && <Reglement />}
+
 </section>
 
       </div>

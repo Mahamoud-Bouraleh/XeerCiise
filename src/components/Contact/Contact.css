@@ -3,7 +3,6 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  text-align: center;
   font-family: Arial, sans-serif;
   background-color: #fff;
   border-radius: 10px;
@@ -14,12 +13,14 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .contact-container p {
   font-size: 1rem;
   color: #555;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .contact-form {
@@ -80,4 +81,25 @@ textarea {
 .submit-button:hover {
   background-color: #0056b3;
   transform: translateY(-2px);
+}
+
+/* Response Message Styles */
+.response-message {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.response-message.success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.response-message.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
 }

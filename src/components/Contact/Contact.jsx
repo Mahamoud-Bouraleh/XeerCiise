@@ -9,21 +9,58 @@ const Contact = () => {
     phone: "",
     message: "",
   });
+  const [responseMessage, setResponseMessage] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
+    setResponseMessage("");
+    setSuccess(false);
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        setResponseMessage("Votre message a été envoyé avec succès !");
+        setSuccess(true);
+        setFormData({
+          nom: "",
+          prenom: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setResponseMessage(result.error || "Erreur lors de l'envoi du message.");
+        setSuccess(false);
+      }
+    } catch (error) {
+      setResponseMessage("Erreur de connexion au serveur.");
+      setSuccess(false);
+    }
   };
 
   return (
     <div className="contact-container">
-      <h1>Get in touch</h1>
-      <p>Leave your message and we'll get back to you shortly.</p>
+      <h1>Nous sommes ici pour vous aider avec vos besoins Xeer Ciise</h1>
+      <p>Laissez votre message, nous vous répondrons rapidement.</p>
+      {responseMessage && (
+        <p className={`response-message ${success ? "success" : "error"}`}>
+          {responseMessage}
+        </p>
+      )}
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <div className="form-field">
@@ -35,6 +72,7 @@ const Contact = () => {
               placeholder="Nom"
               value={formData.nom}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="form-field">
@@ -46,6 +84,7 @@ const Contact = () => {
               placeholder="Prenom"
               value={formData.prenom}
               onChange={handleChange}
+              required
             />
           </div>
         </div>
@@ -56,7 +95,7 @@ const Contact = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="geosom@gmail.com"
+              placeholder="exemple@gmail.com"
               value={formData.email}
               onChange={handleChange}
               required
@@ -79,14 +118,15 @@ const Contact = () => {
           <textarea
             id="message"
             name="message"
-            placeholder="ecrire votre message ici"
+            placeholder="Écrivez votre message ici (max 1000 caractères)"
             value={formData.message}
             onChange={handleChange}
+            maxLength={1000}
             required
           ></textarea>
         </div>
         <button type="submit" className="submit-button">
-          Submit
+          Envoyer
         </button>
       </form>
     </div>

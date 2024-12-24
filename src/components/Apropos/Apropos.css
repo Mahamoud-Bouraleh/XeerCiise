@@ -1,18 +1,65 @@
+/* Styles pour le contenu de la page À Propos */
 .apropos-content {
-    color: #fd7e14; /* Orange theme */
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: justify;
+  color: #333; /* Couleur neutre pour une lecture confortable */
+  font-size: 1.2rem;
+  line-height: 1.8; /* Augmente l'espacement entre les lignes */
+  text-align: justify;
+  padding: 20px; /* Ajout d'un espace autour du contenu */
+  background-color: #f9f9f9; /* Fond doux pour améliorer la lisibilité */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+  max-width: 800px; /* Limite la largeur pour un focus sur le texte */
+  margin: 20px auto; /* Centre le contenu dans la page */
+}
+
+/* Titre principal */
+.apropos-content h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff; /* Couleur bleue pour un contraste fort */
+  text-transform: uppercase; /* Met le titre en majuscules pour plus d'impact */
+  font-weight: bold;
+}
+
+/* Paragraphe */
+.apropos-content p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #555; /* Couleur légèrement plus claire pour différencier du titre */
+}
+
+/* Liste ordonnée */
+.apropos-content ol {
+  padding-left: 20px; /* Ajout d'un espace pour les listes */
+  margin-bottom: 20px;
+}
+
+.apropos-content ol li {
+  margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Boutons ou autres éléments supplémentaires */
+.apropos-content a {
+  color: #fd7e14;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.apropos-content a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .apropos-content {
+      padding: 15px;
+      font-size: 1rem;
   }
-  
+
   .apropos-content h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #fd7e14;
+      font-size: 1.8rem;
   }
-  
-  .apropos-content p {
-    margin-bottom: 20px;
-  }
-  
+}
