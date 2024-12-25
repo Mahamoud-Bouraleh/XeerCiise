@@ -106,6 +106,17 @@ const App = () => {
 </section>
 
       </div>
+        {/* Footer */}
+        <footer className="app-footer">
+        <div className="footer-content">
+          <p>&copy; 2024 Xeer Somali-Ciise. Tous droits réservés.</p>
+          <p>Suivez-nous sur :
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"> Facebook</a> |
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"> Twitter</a> |
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"> Instagram</a>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
