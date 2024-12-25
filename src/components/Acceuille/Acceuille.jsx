@@ -29,15 +29,18 @@ const Acceuille = () => {
       <section className="acceuille-flags">
         <div className="flag-item">
           <img src={require('../../Djibouti.png')} alt="Drapeau 1" className="flag-image" />
-          <p>Le drapeau 1 représente l'unité et la solidarité des communautés Ciises.</p>
+          <p>Les Issas habitent principalement dans la région somalie, notamment dans la Zone de Sitti (anciennement Shinile). 
+            Ils occupent des localités comme Dire Dawa, Afdem et les zones autour de la vallée de la rivière Awash.</p>
         </div>
         <div className="flag-item">
           <img src={require('../../Somalie.png')} alt="Drapeau 2" className="flag-image" />
-          <p>Le drapeau 2 symbolise la paix et la justice dans le Xeer Ciise.</p>
+          <p>En Somalie, les Issas sont concentrés dans le nord-ouest, particulièrement autour de la ville de Zeila.
+             Ils sont également présents dans certaines parties de la région d’Awdal, le long des zones côtières.</p>
         </div>
         <div className="flag-item">
           <img src={require('../../Ethiopie.png')} alt="Drapeau 3" className="flag-image" />
-          <p>Le drapeau 3 incarne les traditions et la résilience des peuples Ciises.</p>
+          <p>Les Issas habitent principalement dans la région somalie, notamment dans la Zone de Sitti (anciennement Shinile). 
+            Ils occupent des localités comme Dire Dawa, Afdem et les zones autour de la vallée de la rivière Awash.</p>
         </div>
       </section>
     </div>

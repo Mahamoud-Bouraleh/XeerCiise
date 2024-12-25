@@ -80,7 +80,6 @@
 }
 
 .flag-item {
-  text-align: center;
   width: 30%; /* Taille égale pour chaque div */
   background-color: #fff;
   padding: 10px;
