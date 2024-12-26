@@ -13,29 +13,9 @@ body {
   flex-direction: column; /* Assure que les enfants sont empilés verticalement */
 }
 
-/* Arrière-plan divisé en deux colonnes */
-.app-container::before,
-.app-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  z-index: 0; /* Derrière les éléments de contenu */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
-.app-container::before {
-  left: 0;
-  background-image: url('./xeercisse.jpg'); /* Image pour la partie gauche */
-}
 
-.app-container::after {
-  right: 0;
-  background-image: url('./aligalageyeh.jpg'); /* Image pour la partie droite */
-}
+
 
 /* Assurez-vous que tout le contenu est au-dessus de l'arrière-plan */
 .app-container > * {
@@ -108,94 +88,22 @@ body {
 .app-main {
   display: flex;
   flex: 1;
-  padding: 20px;
-  gap: 20px;
+  padding: 10px; /* Réduction du padding */
+  gap: 15px; /* Réduction de l'espacement entre les éléments */
+  width: 80%; /* Limite la largeur */
+  margin: 0 auto; /* Centre le contenu */
+  box-sizing: border-box; /* Assure que les dimensions incluent le padding */
 }
 
-/* Sidebar Styles */
-.sidebar-menu {
-  flex: 0 0 250px; /* Largeur fixe */
-  background-color: #ffff; /* Fond blanc légèrement transparent */
-  padding: 15px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  margin-left: 120px;
-}
-
-.sidebar-menu h3 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-}
-
-.sidebar-menu ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar-menu li {
-  margin-bottom: 10px;
-}
-
-.sidebar-menu li a {
-  color: #0069d9;
-  text-decoration: none;
-  padding: 10px 15px;
-  display: block;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.sidebar-menu li a:hover {
-  background-color: #d1ecf1;
-}
-
-/* Main Content Section */
 .main-content {
   flex: 1;
-  padding: 20px;
-  background-color: #fff; /* Fond blanc légèrement transparent */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px; /* Réduction du padding */
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Légère réduction de l'ombre */
   border-radius: 5px;
-  margin-right: 130px;
- 
+  font-size: 0.9rem; /* Réduction de la taille de la police */
 }
 
-
-
-
-
-/* Contact Bar */
-.contact-bar {
-  background-color: #fff; /* Fond blanc légèrement transparent */
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-left: 120px;
-  margin-top: 10px;
-}
-
-.contact-bar h4 {
-  color: #198754;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.contact-bar p {
-  color: #333;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.contact-bar a {
-  color: #0056b3;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contact-bar a:hover {
-  text-decoration: underline;
-}
 
 .language-select {
   margin-right: 20px;
@@ -225,40 +133,115 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer Styles */
 .app-footer {
-  background-color: #333;
+  background-color: #222; /* Couleur sombre pour le fond */
   color: #fff;
-  text-align: center;
-  padding: 20px 10px;
-  margin-top: 20px;
-  position: relative;
-  bottom: 0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
   width: 100%;
 }
 
-.app-footer .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  font-size: 14px;
+.footer-contact, .footer-about, .footer-social {
+  flex: 1;
+  min-width: 250px;
 }
 
-.app-footer a {
+.footer-contact p, .footer-about p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.footer-contact a, .footer-about a {
   color: #1e90ff;
   text-decoration: none;
-  margin: 0 5px;
 }
 
-.app-footer a:hover {
+.footer-contact a:hover {
   text-decoration: underline;
 }
 
-.app-footer p {
-  margin: 5px 0;
+.footer-about h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: #444; /* Fond des icônes */
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+  background-color: #1e90ff;
+  transform: scale(1.1);
+}
+
+.icon-location:before {
+  content: "📍"; /* Ajoutez une icône ou remplacez par une police d'icône */
+  margin-right: 10px;
+}
+
+.icon-phone:before {
+  content: "📞";
+  margin-right: 10px;
+}
+
+.icon-email:before {
+  content: "✉️";
+  margin-right: 10px;
+}
+
+.icon-facebook:before {
+  content: "f"; /* Remplacez par une icône réelle avec FontAwesome ou autre */
+}
+
+.icon-whatsapp:before {
+  content: "w";
+}
+
+.icon-messenger:before {
+  content: "m";
 }
 
 @media (max-width: 768px) {
   .app-footer {
-    font-size: 12px;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  
+
+  
 }
+
+

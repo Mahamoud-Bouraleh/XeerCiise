@@ -1,4 +1,3 @@
-
 import './App.css';
 import sagesLogo from './tete.jpg'; 
 import React, { useState } from "react";
@@ -8,16 +7,13 @@ import Geosom from './components/Map/Map';
 import Historique from './components/Histoire/Historique';
 import Contact from './components/Contact/Contact';
 import Reglement from './components/RegleP/Reglement';
-
-
-
-
-
+import GuerrierSomalie from './components/Guerrier/guerriersomalies';
+import GuerrierCiise from './components/Guerrier/guerrierCiisa';
+import Ogaas from './components/Guerrier/Ogaas';
 
 const App = () => {
   const [language, setLanguage] = useState("francais");
   const [currentPage, setCurrentPage] = useState('accueil');
-
 
   const handleLanguageChange = (e) => {
     setLanguage(e.target.value);
@@ -26,20 +22,16 @@ const App = () => {
   const handleNavigation = (page) => {
     setCurrentPage(page);
   };
-  
+
   return (
-  
-    <div className="app-container"  >
+    <div className="app-container">
       {/* Header Section */}
       <header className="app-header">
-  <img src={sagesLogo} alt="Logo" className="header-logo-left" />
-  <div className="header-content">
-    <h1>Xeer Somali-Ciise</h1>
-  
-  </div>
-  
-</header>
-
+        <img src={sagesLogo} alt="Logo" className="header-logo-left" />
+        <div className="header-content">
+          <h1>Xeer Somali-Ciise</h1>
+        </div>
+      </header>
 
       {/* Navigation */}
       <nav className="main-nav">
@@ -49,6 +41,16 @@ const App = () => {
         <a href="#reglement" onClick={() => handleNavigation('reglement')} className={currentPage === 'reglement' ? 'active' : ''}>Règlement</a>
         <a href="#historique" onClick={() => handleNavigation('historique')} className={currentPage === 'historique' ? 'active' : ''}>Historique</a>
         <a href="#contact" onClick={() => handleNavigation('contact')} className={currentPage === 'contact' ? 'active' : ''}>Contact</a>
+
+        {/* Menu Guerrier */}
+        <div className="dropdown">
+  <a href="#guerrier" className="dropdown-toggle">Guerrier</a>
+  <div className="dropdown-menu">
+    <a href="#guerriersomalie" onClick={() => handleNavigation('guerriersomalie')} className={currentPage === 'guerriersomalie' ? 'active' : ''}>Guerrier Somalie</a>
+    <a href="#guerrierciise" onClick={() => handleNavigation('guerrierciise')} className={currentPage === 'guerrierciise' ? 'active' : ''}>Guerrier Ciise</a>
+    <a href="#ogaas" onClick={() => handleNavigation('ogaas')} className={currentPage === 'ogaas' ? 'active' : ''}>Ogaas</a>
+  </div>
+</div>
 
         
 
@@ -71,50 +73,31 @@ const App = () => {
 
       {/* Main Content */}
       <div className="app-main">
-        <div>
-        <aside className="sidebar-menu">
-          <h3>MENU</h3>
-          <ul>
-         
-            <li><a href="#accueil" onClick={() => handleNavigation('accueil')} className={currentPage === 'accueil' ? 'active' : ''}>ACCUEIL</a></li>
-            <li><a href="#apropos" onClick={() => handleNavigation('apropos')} className={currentPage === 'apropos' ? 'active' : ''}>À propos</a></li>
-            <li><a href="#Map" onClick={() => handleNavigation('Map')} className={currentPage === '' ? 'active' : ''}>Map</a></li>
-            <li><a href="#reglement" onClick={() => handleNavigation('reglement')} className={currentPage === 'reglement' ? 'active' : ''}>Règlement</a></li>
-            <li><a href="#historique" onClick={() => handleNavigation('historique')} className={currentPage === 'historique' ? 'active' : ''}>Historique</a></li>
-            <li> <a href="#contact" onClick={() => handleNavigation('contact')} className={currentPage === 'contact' ? 'active' : ''}>Contact</a></li>
-          
-          </ul>
-          
-        </aside>
-         {/* Contact Bar */}
-      <div className="contact-bar">
-        <h4> CONTACTER NOUS</h4>
-      
-        <p>Téléphone: +253 77 15 34 98</p>
-        <p>Fax: +253 21 36 92 56</p>
-        <p>Mails: <a href="mailto:contact@xeerciise.com">geosom@gmail.com</a></p>
-      </div></div>
-
-      <section className="main-content">
-  {currentPage === 'accueil' && <Acceuille />}
-  {currentPage === 'apropos' && <Apropos />}
-  {currentPage === 'Map' && <Geosom />}
-  {currentPage === 'historique' && <Historique />}
-  {currentPage === 'contact' && <Contact />}
-  {currentPage === 'reglement' && <Reglement />}
-
-</section>
-
+        <section className="main-content">
+          {currentPage === 'accueil' && <Acceuille />}
+          {currentPage === 'apropos' && <Apropos />}
+          {currentPage === 'Map' && <Geosom />}
+          {currentPage === 'historique' && <Historique />}
+          {currentPage === 'contact' && <Contact />}
+          {currentPage === 'reglement' && <Reglement />}
+          {currentPage === 'guerriersomalie' && <GuerrierSomalie />}
+          {currentPage === 'guerrierciise' && <GuerrierCiise />}
+          {currentPage === 'ogaas' && <Ogaas />}
+        </section>
       </div>
-        {/* Footer */}
-        <footer className="app-footer">
+
+      {/* Footer */}
+      <footer className="app-footer">
         <div className="footer-content">
-          <p>&copy; 2024 Xeer Somali-Ciise. Tous droits réservés.</p>
-          <p>Suivez-nous sur :
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"> Facebook</a> |
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"> Twitter</a> |
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"> Instagram</a>
-          </p>
+          <div className="footer-contact">
+            <p><i className="icon-location"></i>Djibouti, balbala</p>
+            <p><i className="icon-phone"></i> <a href="tel:+253 77153498">+253 77 15 34 98 </a></p>
+            <p><i className="icon-email"></i> <a href="mailto:geosom@gmail.com">xeerciise@gmail.com</a></p>
+          </div>
+          <div className="footer-about">
+            <h4>À propos</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p>
+          </div>
         </div>
       </footer>
     </div>

@@ -1,0 +1,55 @@
+/* Conteneur principal */
+.guerrier-somalie-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Titre principal */
+  .guerrier-somalie-container h1 {
+    font-size: 2rem;
+    color: #6f42c1;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraphe principal */
+  .guerrier-somalie-container p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Grille d'images */
+  .image-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* S'adapte aux petits écrans */
+  }
+  
+  /* Carte d'image */
+  .image-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 200px;
+  }
+  
+  /* Image */
+  .image-card .image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  /* Description de l'image */
+  .image-description {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
