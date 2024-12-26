@@ -3,6 +3,7 @@ import './GuerrierSomalie.css'; // Fichier CSS lié
 import hawatako from './image/hawatako.jpg'; // Importez l'image correctement
 import sayidMedabdillahi from './image/sayidMedabdillahi.jpg'; 
 import Imaam_Ahmed_Gurey from './image/Imaam_Ahmed_Gurey.jpg'; 
+import ajuraansultana from './image/ajuuraanSultana.jpg'; 
 
 const GuerrierSomalie = () => {
   return (
@@ -30,6 +31,14 @@ const GuerrierSomalie = () => {
             Active contre la colonisation italienne, elle est célébrée comme un symbole de courage et d'émancipation féminine dans l'histoire
              de la Somalie.</p>
         </div>
+        <div className="image-card">
+          <img src={ajuraansultana } alt="Ajuraan sultana" className="image" />
+          <p className="image-description">(somali : Saldanadii Ajuuraan ; arabe : سلطنة الأجورانية) ou tout simplement Ajuran1,
+             est un État islamique somali ayant dirigé et développé, du XIIIe au XVIIe siècle, une importante partie
+              de la Corne de l'Afrique  </p>
+        </div>
+
+
       </div>
     </div>
   );
