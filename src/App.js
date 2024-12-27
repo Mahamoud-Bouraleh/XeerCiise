@@ -7,9 +7,8 @@ import Geosom from './components/Map/Map';
 import Historique from './components/Histoire/Historique';
 import Contact from './components/Contact/Contact';
 import Reglement from './components/RegleP/Reglement';
-import GuerrierSomalie from './components/Guerrier/guerriersomalies';
-import GuerrierCiise from './components/Guerrier/guerrierCiisa';
-import Ogaas from './components/Guerrier/Ogaas';
+import Guerrier from './components/Guerrier/Guerrier'; 
+
 
 const App = () => {
   const [language, setLanguage] = useState("francais");
@@ -40,18 +39,8 @@ const App = () => {
         <a href="#Map" onClick={() => handleNavigation('Map')} className={currentPage === 'Map' ? 'active' : ''}>Map</a>
         <a href="#reglement" onClick={() => handleNavigation('reglement')} className={currentPage === 'reglement' ? 'active' : ''}>Règlement</a>
         <a href="#historique" onClick={() => handleNavigation('historique')} className={currentPage === 'historique' ? 'active' : ''}>Historique</a>
+        <a href="#guerrier" onClick={() => handleNavigation('guerrier')} className={currentPage === 'guerrier' ? 'active' : ''}>Guerrier</a>
         <a href="#contact" onClick={() => handleNavigation('contact')} className={currentPage === 'contact' ? 'active' : ''}>Contact</a>
-
-        {/* Menu Guerrier */}
-        <div className="dropdown">
-  <a href="#guerrier" className="dropdown-toggle">Guerrier</a>
-  <div className="dropdown-menu">
-    <a href="#guerriersomalie" onClick={() => handleNavigation('guerriersomalie')} className={currentPage === 'guerriersomalie' ? 'active' : ''}>Guerrier Somalie</a>
-    <a href="#guerrierciise" onClick={() => handleNavigation('guerrierciise')} className={currentPage === 'guerrierciise' ? 'active' : ''}>Guerrier Ciise</a>
-    <a href="#ogaas" onClick={() => handleNavigation('ogaas')} className={currentPage === 'ogaas' ? 'active' : ''}>Ogaas</a>
-  </div>
-</div>
-
         
 
         <div className="language-select">
@@ -80,9 +69,8 @@ const App = () => {
           {currentPage === 'historique' && <Historique />}
           {currentPage === 'contact' && <Contact />}
           {currentPage === 'reglement' && <Reglement />}
-          {currentPage === 'guerriersomalie' && <GuerrierSomalie />}
-          {currentPage === 'guerrierciise' && <GuerrierCiise />}
-          {currentPage === 'ogaas' && <Ogaas />}
+          {currentPage === 'guerrier' && <Guerrier />} 
+         
         </section>
       </div>
 
@@ -96,7 +84,8 @@ const App = () => {
           </div>
           <div className="footer-about">
             <h4>À propos</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p>
+            <p>Interface ou les visiteurs peuvent consulter l'histoire de Somali, l'histoire de Issa
+               , biographie des Ougaas et differents regles de Xeer Ciise </p>
           </div>
         </div>
       </footer>

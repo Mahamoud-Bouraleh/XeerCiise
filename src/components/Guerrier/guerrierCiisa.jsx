@@ -1,6 +1,6 @@
 import React from 'react';
 
-import sayidMedabdillahi from './image/sayidMedabdillahi.jpg'; 
+import Ali_kalageeye from './image/Ali_kalageeye.jpg'; 
 import Mahamoud_harbi from './image/Mahamoud_Harbi.jpg'; 
 import Sultanate_adal from './image/Sultanate_adal.jpg'; 
 
@@ -20,10 +20,11 @@ const GuerrierCiisa = () => {
             accident d'avion, laissant un héritage de nationalisme et de lutte pour la liberté.</p>
         </div>
         <div className="image-card">
-          <img src={sayidMedabdillahi} alt="Sayid Mohammed" className="image" />
-          <p className="image-description">Sayid Maxamed Cabdille Xasan (1856-1920) fut un leader religieux et militaire somalien, 
-            fondateur des Daraawiish, un mouvement de résistance contre le colonialisme britannique, italien et éthiopien. Poète et
-             orateur charismatique, il reste un héros national somalien pour son combat pour l'unité et l'indépendance de son peuple.</p>
+          <img src={Ali_kalageeye} alt="Ali Kalageeye" className="image" />
+          <p className="image-description"> Cali Kalageeye est une figure légendaire du folklore somalien,
+             associée au XIXe siècle. Il est célèbre pour sa lutte contre le tyran Aale Boore, utilisant son 
+             intelligence et sa ruse pour libérer son peuple de l'oppression. Son histoire, transmise oralement 
+             parmi le clan Issa, symbolise la résistance et la justice dans la culture somalienne. </p>
         </div>
         <div className="image-card">
           <img src={Sultanate_adal} alt="Sultanate Adal" className="image" />

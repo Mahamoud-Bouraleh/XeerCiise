@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth; /* Activation du défilement fluide */
+}
+
 .historique-page {
   display: flex;
   gap: 20px;
@@ -42,8 +46,6 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-
-
 .historique-sidebar a:hover {
   background-color: green;
   color: red;
@@ -58,27 +60,7 @@
   color: rgb(31, 23, 23);
 }
 
-/* Header et contenu principal */
-.historique-header-and-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.historique-header {
-  background-color: #6f42c1;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.historique-header h1 {
-  font-size: 2rem;
-  margin: 0;
-}
-
+/* Contenu principal */
 .historique-content {
   background-color: #fff;
   border-radius: 5px;
@@ -86,13 +68,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.historique-content .title {
-  text-align: center;
-  margin-bottom: 20px;
-  background-color: #66abf4;
-  margin-top: 0px;
-  
-}
 .historique-content .title h2 {
   text-align: center;
   margin-bottom: 20px;

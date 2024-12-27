@@ -13,9 +13,10 @@ const Ogaas = () => {
       <div className="image-grid">
         <div className="image-card">
           <img src={ugaasMoustapha } alt="Ougaas Moustapha" className="image" />
-          <p className="image-description">Ahmed Gurey (1506-1543) fut un leader militaire et religieux somalien de l'Empire Adal.
-             Il est célèbre pour avoir mené les Guerres Adal-Éthiopie, défiant l'Empire éthiopien avec le soutien des Ottomans.
-              Son courage et son habileté stratégique ont fait de lui une figure incontournable de l'histoire de la Corne de l'Afrique.</p>
+          <p className="image-description">Ugaas Moustapha Mohamed Omar, est un leader traditionnel 
+            de l'ethnie Issa en Somalie, intronisé en 2010. Son ascension a été controversée en raison d'allégations 
+            de manipulation par le gouvernement d'Ismael Omar Guelleh. En tant qu'Ugaas, il est chargé de préserver 
+            les traditions et de médiatiser les conflits au sein de sa communauté.</p>
         </div>
         <div className="image-card">
         <img src={ugaasHassan} alt="Ougaas Hassan" className="image" />

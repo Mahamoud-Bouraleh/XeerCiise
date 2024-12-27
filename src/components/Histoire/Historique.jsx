@@ -1,14 +1,12 @@
-// Historique.jsx
 import React from "react";
 import './Historique.css';
 
 const Historique = () => {
   return (
     <div className="historique-page">
-      
       {/* Sommaire */}
       <aside className="historique-sidebar">
-        
+        <h3>Sommaire</h3>
         <ul>
           <li>
             <a href="#histoire-somali">Histoire Somali</a>
@@ -48,7 +46,7 @@ const Historique = () => {
         <section id="histoire-somali" className="histoire-section">
           <h3>Histoire Somali</h3>
         
-          <h1>1. Soomaalida Hore</h1>
+          <h1 id="soomaalida-hore">1. Soomaalida Hore</h1>
 <p>
 Asalka Soomaalida: Waxaa la rumeysan yahay in Soomaalida ay ka soo farcameen qowmiyadaha Kushitik ee ka 
 soo jeeda woqooyiga-bari Afrika. Meelaha taariikhda Soomaalida hore looga hadlo waxaa ka mid ah bariga
@@ -59,7 +57,7 @@ Hab-nololeedka: Soomaalida hore waxay ahaayeen xoolo-dhaqato (geel, ari, iyo lo'
  hawd iyo ooman ah. Waxa kale oo ay caan ku ahaayeen xirfadda kalluumaysiga ee xeebaha dheer.
 </p>
 
-<h1>2. Diimaha iyo Isbedelada Dhaqanka</h1>
+<h1 id="diimaha-isbedelada" >2. Diimaha iyo Isbedelada Dhaqanka</h1>
 <p>
 Diinta Islaamka: Diinta Islaamka ayaa timid qarnigii 7aad, markii ay ganacsatada Carabtu yimaadeen xeebaha Soomaaliya,
  sida magaalada Saylac iyo Berbera. Soomaalida waxay ahaayeen dadkii ugu horreeyey ee diinta Islaamka qaata Geeska Afrika.
@@ -69,7 +67,7 @@ Ganacsiga: Soomaaliya waxay ahayd xarun muhiim ah oo ganacsi, waxaana xeebaha So
  ay ka mid yihiin faaras, dhuxul, iyo malab.
 </p>
 
-<h1>3. Boqortooyooyinkii Hore</h1>
+<h1 id="boqortooyooyinka-hore">3. Boqortooyooyinkii Hore</h1>
 <p>
 Ajuuraan (13aad–17aad): Waxay ahayd boqortooyo muslim ah oo xoog badan, kana talin jirtay bartamaha Soomaaliya. Waxay dhistay
  kanaalo waaweyn oo waraabka xoolaha iyo beeraleyda u adeegayey.
@@ -142,7 +140,7 @@ Dib-u-dhiska Dowladnimo: Dadaallada AMISOM iyo beesha caalamka ayaa ku lug leh d
 
         <section id="histoire-ciise" className="histoire-section">
           <h3>Histoire de Ciise</h3>
-          <h1>1. Asalka iyo Sooyaalka Ciisaha</h1>
+          <h1 id="asalka-sooyaalka" >1. Asalka iyo Sooyaalka Ciisaha</h1>
 <p>
 Dir iyo Ciise: Ciisaha waxay ka tirsan yihiin waaxda Dir, oo ah mid ka mid ah jilibyada waaweyn ee Soomaalida. Dir wuxuu ka tirsan yahay Kushitik-ka waqooyi, kuwaas oo muddo dheer ku noolaa Geeska Afrika.
 </p>
@@ -158,7 +156,7 @@ Degaanada Ciisaha:
 Asal Taariikheed: Waxaa jira sheekooyin isku dhafan oo tilmaamaya in Ciisaha ay ka yimaadeen dhulalka Kushitik-ka iyo Badda Cas ee waqooyiga.
 </p>
 
-<h1>2. Dhaqanka iyo Hab-nololeedka Ciisaha</h1>
+<h1 id="dhaqanka-habnololeedka">2. Dhaqanka iyo Hab-nololeedka Ciisaha</h1>
 <p>
 Xoolo-dhaqashada:
 <ul>
@@ -181,7 +179,7 @@ Afka iyo Suugaanta:
 </ul>
 </p>
 
-<h1>3. Halyeeyada iyo Halganka Taariikheed</h1>
+<h1 id="halyeeyada-halganka">3. Halyeeyada iyo Halganka Taariikheed</h1>
 <p>
 Dagaalka Gumaysiga:
 <ul>
@@ -266,7 +264,7 @@ Dadka Ciisaha waa qoomiyad Soomaaliyeed oo leh taariikh fac weyn, dhaqammo hodan
              uu soo maray xeerkan.
 
           </p>
-          <h1>  1. Marxaladihii Hore ee Xeerka (Asalka Xeerka)</h1>
+          <h1 id="marxaladihii-hore">  1. Marxaladihii Hore ee Xeerka (Asalka Xeerka)</h1>
           <p>
                                 
         Xeer Ciise wuxuu ka dhashay baahida loo qabo hab caddaaladeed oo lagu xakameeyo khilaafaadka iyo wada-noolaanshaha bulsho.
@@ -278,7 +276,7 @@ Dadka Ciisaha waa qoomiyad Soomaaliyeed oo leh taariikh fac weyn, dhaqammo hodan
 
 
           </p>
-          <h1>  2. Xilligii Dhexe (Dhaqan-galka iyo Ballaarinta Xeerka)</h1>
+          <h1 id="xilligii-dhexe"> 2. Xilligii Dhexe (Dhaqan-galka iyo Ballaarinta Xeerka)</h1>
           <p>
                      
         Xeer Ciise wuxuu noqday mid si rasmi ah uga dhex jira hab-nololeedka beesha oo dhan, isagoo diiradda saaray ilaalinta nabadda, 
@@ -296,7 +294,7 @@ Dadka Ciisaha waa qoomiyad Soomaaliyeed oo leh taariikh fac weyn, dhaqammo hodan
 
 
           </p>
-          <h1>  3. Xilligii Gumeysiga (Qarnigii 19aad–20aad)</h1>
+          <h1 id="xilligii-gumeysiga"> 3. Xilligii Gumeysiga (Qarnigii 19aad–20aad)</h1>
           <p>
          
 Gumeysiga reer Yurub, gaar ahaan Faransiiska ee Jabuuti iyo Itoobiya ee dhulka Soomaalida, 
@@ -311,7 +309,7 @@ Dowladihii gumeysiga ayaa qaarkood aqoonsaday xeer Ciise, gaar ahaan marka ay ti
 
          
           </p>
-          <h1>  4. Casriga (Qarnigii 20aad–Hadda)</h1>
+          <h1 id="casriga"> 4. Casriga (Qarnigii 20aad–Hadda)</h1>
           <p>
         
 Xeer Ciise wali waa nidaam dhaqameed firfircoon oo si gaar ah uga jira miyiga iyo degaannada beesha Ciise ee ku kala yaal Jabuuti, Soomaaliya, iyo Itoobiya.
