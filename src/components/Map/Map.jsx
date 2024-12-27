@@ -3,9 +3,9 @@ import React from "react";
 const Map = () => {
   return (
     <div>
-      <h2>Bienvenue sur la Carte</h2>
+      <h2>la Carte de Ciisa</h2>
       <iframe
-        src="/carte-ciise/Carte.html" // Chemin relatif dans le dossier public
+        src="/Carte-ciise/carte.html" // Chemin correct vers le fichier HTML dans le dossier public
         title="Carte du système Xeer Ciise"
         width="100%"
         height="500px"
