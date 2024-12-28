@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import './Guerrier.css';
+import './Figures.css';
 import Ougaas from './Ogaas';
 import GuerrierSomalie from './guerriersomalies';
 import GuerrierCiisa from './guerrierCiisa';
 
 const Guerrier = () => {
-  const [selectedSection, setSelectedSection] = useState("somali");
+  const [selectedSection, setSelectedSection] = useState("ougaas"); // Par défaut Ougaas
 
   const renderContent = () => {
     switch (selectedSection) {
@@ -16,7 +16,7 @@ const Guerrier = () => {
       case "ougaas":
         return <Ougaas />;
       default:
-        return <GuerrierSomalie />; // Par défaut GuerrierSomalie
+        return <Ougaas />; // Par défaut Ougaas
     }
   };
 
@@ -24,22 +24,22 @@ const Guerrier = () => {
     <div className="guerrier-container">
       <div className="guerrier-buttons">
         <button
-          className={selectedSection === "somali" ? "active" : ""}
-          onClick={() => setSelectedSection("somali")}
+          className={selectedSection === "ougaas" ? "active" : ""}
+          onClick={() => setSelectedSection("ougaas")}
         >
-          Guerrier Somali
+          Ougaas
         </button>
         <button
           className={selectedSection === "ciisa" ? "active" : ""}
           onClick={() => setSelectedSection("ciisa")}
         >
-          Guerrier Ciise
+          Ciise
         </button>
         <button
-          className={selectedSection === "ougaas" ? "active" : ""}
-          onClick={() => setSelectedSection("ougaas")}
+          className={selectedSection === "somali" ? "active" : ""}
+          onClick={() => setSelectedSection("somali")}
         >
-          Ougaas
+          Somali
         </button>
       </div>
       <div className="guerrier-content">

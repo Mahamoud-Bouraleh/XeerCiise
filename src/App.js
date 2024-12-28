@@ -7,7 +7,7 @@ import Geosom from './components/Map/Map';
 import Historique from './components/Histoire/Historique';
 import Contact from './components/Contact/Contact';
 import Reglement from './components/RegleP/Reglement';
-import Guerrier from './components/Guerrier/Guerrier'; 
+import Guerrier from './components/Guerrier/Figures'; 
 
 
 const App = () => {
@@ -39,7 +39,7 @@ const App = () => {
         <a href="#Map" onClick={() => handleNavigation('Map')} className={currentPage === 'Map' ? 'active' : ''}>Map</a>
         <a href="#reglement" onClick={() => handleNavigation('reglement')} className={currentPage === 'reglement' ? 'active' : ''}>Règlement</a>
         <a href="#historique" onClick={() => handleNavigation('historique')} className={currentPage === 'historique' ? 'active' : ''}>Historique</a>
-        <a href="#guerrier" onClick={() => handleNavigation('guerrier')} className={currentPage === 'guerrier' ? 'active' : ''}>Guerrier</a>
+        <a href="#guerrier" onClick={() => handleNavigation('guerrier')} className={currentPage === 'guerrier' ? 'active' : ''}>Figure</a>
         <a href="#contact" onClick={() => handleNavigation('contact')} className={currentPage === 'contact' ? 'active' : ''}>Contact</a>
         
 
