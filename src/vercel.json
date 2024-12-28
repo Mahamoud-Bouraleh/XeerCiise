@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      {
+        "source": "/Carte-ciise/:path*",
+        "destination": "/Carte-ciise/:path*"
+      }
+    ]
+  }
+  
